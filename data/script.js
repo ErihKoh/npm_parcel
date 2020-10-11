@@ -1,7 +1,7 @@
 import images from "./gallery-items.js";
 
 const imagesGallery = document.querySelector(".js-gallery");
-const imageModal = document.querySelector(".lightbox__content");
+// const imageModal = document.querySelector(".lightbox__content");
 const btnModalClose = document.querySelector(".lightbox__button");
 const modalBtnRight = document.querySelector(".scroll-right");
 const modalBtnLeft = document.querySelector(".scroll-left");
