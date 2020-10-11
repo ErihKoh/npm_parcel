@@ -30,6 +30,7 @@ function creatGalleryMarkup(images) {
 }
 
 function onImageOpenClick(evt) {
+  evt.preventDefault();
   window.addEventListener("keydown", modalImgScrolling);
   modalBtnRight.addEventListener("click", modalImgScrolling);
   modalBtnLeft.addEventListener("click", modalImgScrolling);
@@ -42,17 +43,7 @@ function onImageOpenClick(evt) {
     return;
   }
   overlay.classList.add("is-open");
-  // imageModal.innerHTML = `<a
-  //       class="gallery__link"
-  //       href=${evt.target.dataset.source}
-  //   >
-  //       <img
-  //           class="lightbox__image"
-  //           src=${evt.target.dataset.source}
-  //           data-source=${evt.target.dataset.source}
-  //           alt=${evt.target.alt}
-  //       />
-  //   </a>`;
+  
   currentImage.src = `${evt.target.dataset.source}`;
   currentImage.alt = `${evt.target.alt}`;
 }
